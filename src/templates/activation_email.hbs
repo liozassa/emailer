@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>אימות מייל Digital Cobwebs</title>
+    <style>
+        .content {
+          background-color:#edf6fa;
+          width:60%;
+          margin: 50px auto 50px auto;
+          padding:50px;
+          text-align:center;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .btn-activation {
+          background-color:#3182bd;
+          color:white;
+          padding:10px 100px;
+          border-radius: 50px;
+          font-size:20px;
+          border: 2px white solid;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .btn-activation:hover {
+          background-color:white;
+          color:#3182bd;
+          padding:10px 100px;
+          border-radius: 50px;
+          font-size:20px;
+          border: 2px #3182bd solid;
+      }
+
+      .intro {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+      <div dir="rtl" class="content">
+          <img width="400px" src="https://digitalcobwebs.com/wp-content/uploads/2021/01/logo.png" />
+          <h2>היי {{member.first_name}} {{member.last_name}},</h2>
+          <p>ע״מ לסיים את תהליך הרישום, רשום את הקוד הזה לבוט שלנו.</p>
+          <h1>{{secret}}</h1>
+      <div>
+  </body>
+</html>

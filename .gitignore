@@ -1,0 +1,12 @@
+# Dependency directories
+/node_modules
+
+# Logs
+/logs
+
+# Dockers
+Dockerfile
+.dockerignore
+
+# dotenv environment variables file
+nodemon.json
