@@ -13,10 +13,10 @@ export class EmailController {
     public initRoutes() {
         this.router.post('/', async (req, res, next) => {
             try {
-                if (!req.body.addresses || !req.body.message || !req.body.subject) {
+                if (!req.body.address || !req.body.message || !req.body.subject) {
                     throw 'Invalid email params';
                 }
-                this.emailService.sendMail(<string>req.body.addresses, <string>req.body.message, <string>req.body.subject);
+                this.emailService.sendMail(<string>req.body.address, <string>req.body.message, <string>req.body.subject);
                 res.status(200).json({
                     message: "Email sent successfully!",
                     success: true
@@ -31,10 +31,10 @@ export class EmailController {
 
         this.router.post('/activation', async (req, res, next) => {
             try {
-                if (!req.body.member) {
-                    throw 'Invalid email params';
+                if (!req.body.email_verification) {
+                    throw 'Invalid params';
                 }
-                this.emailService.sendActivationEmail(req.body.member);
+                this.emailService.sendActivationEmail(req.body.email_verification);
                 res.status(200).json({
                     message: "Activation Email sent successfully!",
                     success: true
